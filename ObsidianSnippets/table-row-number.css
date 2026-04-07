@@ -1,0 +1,15 @@
+table tr {
+  counter-increment: rowNumber;
+}
+
+table thead tr::before {
+  content: " ";
+}
+
+table tbody tr::before {
+  content: counter(rowNumber);
+  color: var(--list-marker-color);
+  display: inline flex;
+  padding-right: 2ch;
+}
+
